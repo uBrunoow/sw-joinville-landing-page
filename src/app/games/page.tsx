@@ -63,8 +63,8 @@ export default function JogosTICards() {
     <div className="pb-10">
             <Breadcrumb
         pageName="Jogos Interativos de TI"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
+        description="Explore uma variedade de jogos interativos de TI e aprenda de forma divertida e envolvente. Desafie suas habilidades e amplie seus conhecimentos!"
+        />
     <div className="container mx-auto ">
       {/* <h1 className="text-3xl font-bold mb-6 text-center">Jogos Interativos de TI</h1> */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

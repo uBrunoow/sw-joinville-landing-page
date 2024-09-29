@@ -55,9 +55,9 @@ export default function RankingAlunos() {
   return (
     <div className="pb-10">
     <Breadcrumb
-pageName="Ranking de Alunos"
-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-/>
+      pageName="Ranking de Alunos"
+      description="Confira o desempenho dos alunos e veja quem está no topo do ranking. Acompanhe o progresso e celebre as conquistas!"
+      />
     <div className="container mx-auto">
       <Table>
         <TableHeader>
