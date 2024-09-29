@@ -57,8 +57,8 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <PricingBox
+        <div className=" gap-x-8 gap-y-10 flex items-center justify-center">
+          {/* <PricingBox
             packageName="Lite"
             price={isMonthly ? '0' : '0'}
             duration={isMonthly ? 'mês' : 'ano'}
@@ -70,12 +70,12 @@ const Pricing = () => {
             <OfferList text="Suporte por Email" status="active" />
             <OfferList text="Sem Acesso a Competição entre Alunos" status="inactive" />
             <OfferList text="Acesso a Comunidade Exclusiva" status="inactive" />
-          </PricingBox>
+          </PricingBox> */}
           
           <PricingBox
             packageName="Basic"
-            price={isMonthly ? '99,99' : '1199,88'}
-            duration={isMonthly ? 'mês' : 'ano'}
+            price={isMonthly ? '49,90' : '525,88'}
+            duration={isMonthly ? 'mês/aluno' : 'ano/aluno'}
             subtitle="Tenha acesso a mais conteúdos e gamifique seu aprendizado com o plano Basic."
           >
             <OfferList text="Acesso a Todos os Módulos de TI" status="active" />
@@ -86,7 +86,7 @@ const Pricing = () => {
             <OfferList text="Acesso a Comunidade Exclusiva" status="inactive" />
           </PricingBox>
           
-          <PricingBox
+          {/* <PricingBox
             packageName="Plus"
             price={isMonthly ? '199,90' : '2398,80'}
             duration={isMonthly ? 'mês' : 'ano'}
@@ -98,7 +98,7 @@ const Pricing = () => {
             <OfferList text="Participação em Rankings Nacionais" status="active" />
             <OfferList text="Acesso a Competição entre Alunos e Universidades" status="active" />
             <OfferList text="Acesso a Comunidade Exclusiva com Mentorias" status="active" />
-          </PricingBox>
+          </PricingBox> */}
         </div>
 
 
