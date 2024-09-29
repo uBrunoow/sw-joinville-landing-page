@@ -14,6 +14,7 @@ type Aluno = {
   nome: string
   pontuacao: number
   avatar: string
+  projetos?: string
 }
 
 const alunos: Aluno[] = [
@@ -22,30 +23,35 @@ const alunos: Aluno[] = [
     nome: 'Maria Silva',
     pontuacao: 95,
     avatar: '/placeholder.svg?height=32&width=32',
+    projetos: 'Projeto 1, Projeto 2',
   },
   {
     id: 2,
     nome: 'João Santos',
     pontuacao: 92,
     avatar: '/placeholder.svg?height=32&width=32',
+    projetos: 'Projeto 3, Projeto 4',
   },
   {
     id: 3,
     nome: 'Ana Oliveira',
     pontuacao: 88,
     avatar: '/placeholder.svg?height=32&width=32',
+    projetos: 'Projeto 5, Projeto 6',
   },
   {
     id: 4,
     nome: 'Pedro Costa',
     pontuacao: 85,
     avatar: '/placeholder.svg?height=32&width=32',
+    projetos: 'Projeto 7, Projeto 8',
   },
   {
     id: 5,
     nome: 'Carla Ferreira',
     pontuacao: 82,
     avatar: '/placeholder.svg?height=32&width=32',
+    projetos: 'Projeto 9, Projeto 10',
   },
 ]
 
@@ -64,6 +70,7 @@ export default function RankingAlunos() {
           <TableRow>
             <TableHead className="w-[100px]">Posição</TableHead>
             <TableHead>Aluno</TableHead>
+            <TableHead>Projetos</TableHead>
             <TableHead className="text-right">Pontuação</TableHead>
           </TableRow>
         </TableHeader>
@@ -84,6 +91,11 @@ export default function RankingAlunos() {
                   </Avatar>
                   {aluno.nome}
                 </div>
+              </TableCell>
+              <TableCell>
+                {aluno.projetos && (
+                  <span className="text-sm text-gray-500">{aluno.projetos}</span>
+                )}
               </TableCell>
               <TableCell className="text-right">{aluno.pontuacao}</TableCell>
             </TableRow>
