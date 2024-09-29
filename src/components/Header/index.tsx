@@ -9,13 +9,13 @@ import Logo from '../../../assets/logo.png'
 
 const Header = () => {
   // Navbar toggle
-  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false)
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen)
   }
 
   // Sticky Navbar
-  const [sticky, setSticky] = useState(false)
+  const [sticky, setSticky] = useState<boolean>(false)
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
       setSticky(true)
@@ -25,11 +25,14 @@ const Header = () => {
   }
   useEffect(() => {
     window.addEventListener('scroll', handleStickyNavbar)
-  })
+    return () => {
+      window.removeEventListener('scroll', handleStickyNavbar)
+    }
+  }, [])
 
   // submenu handler
-  const [openIndex, setOpenIndex] = useState(-1)
-  const handleSubmenu = (index) => {
+  const [openIndex, setOpenIndex] = useState<number>(-1)
+  const handleSubmenu = (index: number) => {
     if (openIndex === index) {
       setOpenIndex(-1)
     } else {
@@ -142,10 +145,10 @@ const Header = () => {
                                 openIndex === index ? 'block' : 'hidden'
                               }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
+                              {menuItem && menuItem.submenu && menuItem.submenu.map((submenuItem, subIndex) => (
                                 <Link
-                                  href={submenuItem.path}
-                                  key={index}
+                                  href={submenuItem.path ?? '#'}
+                                  key={subIndex}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
